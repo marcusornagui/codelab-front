@@ -1,0 +1,46 @@
+<div class="login">
+    <mat-card class="card-login">
+        <div class="login-descricao">
+            <div class="box-titulo">
+                <h1>Tecnologia para o seu supermercado ter mais resultados!</h1>
+            </div>
+            <div class="box-list-beneficios">
+                <ul>
+                    <li>Aumento da Produtividade</li>
+                    <li>Segurança de Dados</li>
+                    <li>Organização</li>
+                    <li>Controle de Estoque</li>
+                    <li>Controle Financeiro e Fiscal</li>
+                    <li>Auxilio para Tomadas de Decisões</li>
+                </ul>
+            </div>
+            <div class="box-img-carrinho">
+                <img class="img-carrinho" src="../assets/images/login_carrinho.png">
+            </div>
+        </div>
+        <div class="login-formulario">
+            <div class="box-img-logo">
+                <img class="img-logo" src="../assets/images/logo_vr.svg">
+            </div>
+            <mat-form-field class="input-text">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Insira seu e-mail" value="">
+            </mat-form-field>
+
+            <mat-form-field class="input-text">
+                <mat-label>Senha</mat-label>
+                <input matInput [type]="ocultarSenha ? 'password' : 'text'">
+                <button mat-icon-button matSuffix (click)="ocultarSenha = !ocultarSenha"
+                    [attr.aria-label]="'Esconder password'" [attr.aria-pressed]="ocultarSenha">
+                    <mat-icon>{{ocultarSenha ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+
+            <mat-slide-toggle class="lembrar-usuario" color="primary">Lembrar meu usuário</mat-slide-toggle>
+
+            <button mat-flat-button class="botao-entrar" color="primary">Entrar</button>
+        </div>
+    </mat-card>
+    <img class="img-vrsoftware" src="../assets/images/logo_vr_com_assinatura.svg">
+
+</div>
